@@ -62,17 +62,6 @@ def validate():
         if len(email) < 3 or len(email) > 20 or " " in email or not (email.count('@') == 1) or not (email.count('.') == 1):
             email_error='not a valid email'
 
-    #if "@" not in email:
-       # error = "You do not have a valid email"
-        #return render_template('index.html',title="Signup Error",email_error=error,username=username,email=email)
-
-    #if "." not in email:
-        #error = "You do not have a valid email"
-       # return render_template('index.html',title="Signup Error",email_error=error,username=username,email=email)
-    #if "@, ." not in email:
-        #return render_template('welcome.html',title="Welcome",username=username)
-        
-    
     return redirect("/Welcome?username=" + username)
     
 @app.route("/Welcome", methods=['GET'])
